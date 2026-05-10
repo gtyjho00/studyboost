@@ -4,13 +4,13 @@ import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { BottomNav } from '../components/BottomNav';
 import {
-  ArrowLeft, Zap, Star, Lock, Crown
+  ArrowLeft, Zap, Star, Lock, Crown, type LucideIcon
 } from 'lucide-react';
 
 interface Category {
   key: string;
   title: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   color: string;
 }
 
@@ -25,7 +25,7 @@ interface Lesson {
 interface SubjectPageProps {
   module: string;
   title: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   color: string;
   categories: Category[];
   premium?: boolean;

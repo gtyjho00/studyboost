@@ -99,7 +99,7 @@ export function PricingPage() {
             const Icon = planIcons[product.name] || Zap;
             const gradient = planColors[product.name] || 'from-blue-500 to-cyan-400';
             const isLoading = loadingId === product.id;
-            const isCurrentPlan = isPremium() && getSubscriptionPlan()?.name === product.name;
+            const isCurrentPlan = !!(isPremium() && getSubscriptionPlan()?.name === product.name);
             const isPopular = product.id === popularPlanId;
 
             return (

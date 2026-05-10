@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../context/AuthContext';
 import { useSubscription } from '../hooks/useSubscription';
 import { supabase } from '../lib/supabase';
 import {
@@ -212,3 +212,6 @@ export function SubscriptionPage() {
     </div>
   );
 }
+
+
+export { SubscriptionPage }

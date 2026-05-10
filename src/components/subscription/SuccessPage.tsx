@@ -7,14 +7,14 @@ import { CheckCircle2, Crown, Sparkles } from 'lucide-react'
 
 export function SuccessPage() {
   const navigate = useNavigate()
-  const { refetch } = useSubscription()
+  const { loading } = useSubscription()
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      refetch()
-    }, 2000)
+      navigate('/dashboard', { replace: true })
+    }, 3000)
     return () => clearTimeout(timer)
-  }, [refetch])
+  }, [navigate])
 
   return (
     <div className="min-h-screen bg-dark-900 flex items-center justify-center p-4">
@@ -43,7 +43,7 @@ export function SuccessPage() {
           </p>
 
           <Button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/dashboard')}
             className="w-full gradient-purple text-white border-0"
           >
             Começar a Aprender

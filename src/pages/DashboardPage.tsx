@@ -142,7 +142,7 @@ export function DashboardPage() {
         lessons.forEach((l) => {
           if (!byModule[l.module]) byModule[l.module] = { total: 0, completed: 0 };
           byModule[l.module].total++;
-          if (completedIds.has(l.lesson_id)) byModule[l.module].completed++;
+          if (completedIds.has(l.id)) byModule[l.module].completed++;
         });
 
         const progMap: Record<string, number> = {};
