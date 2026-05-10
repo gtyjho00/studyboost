@@ -159,3 +159,6 @@ export function CadastroPage() {
     </div>
   );
 }
+
+
+export { CadastroPage }
