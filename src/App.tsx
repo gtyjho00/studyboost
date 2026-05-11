@@ -5,6 +5,8 @@ import { BottomNav } from './components/BottomNav'
 import { OfflineIndicator } from './components/OfflineIndicator'
 import { NotificationPrompt } from './components/NotificationPrompt'
 import { LandingPage } from './pages/LandingPage'
+import { PricingPage } from './pages/PricingPage'
+import { SuccessPage } from './pages/SuccessPage'
 import { LoginPage } from './pages/LoginPage'
 import { CadastroPage } from './pages/CadastroPage'
 import { RecuperarSenhaPage } from './pages/RecuperarSenhaPage'
@@ -103,6 +105,8 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <LandingPage />} />
+      <Route path="/pricing" element={<PricingPage />} />
+      <Route path="/success" element={<SuccessPage />} />
       <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage />} />
       <Route path="/cadastro" element={user ? <Navigate to="/dashboard" replace /> : <CadastroPage />} />
       <Route path="/recuperar-senha" element={<RecuperarSenhaPage />} />
