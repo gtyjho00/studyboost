@@ -212,6 +212,3 @@ export function SubscriptionPage() {
     </div>
   );
 }
-
-
-export { SubscriptionPage }
